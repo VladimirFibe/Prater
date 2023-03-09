@@ -4,7 +4,7 @@ import SwiftUI
 struct iTunesSearchApp: App {
     var body: some Scene {
         WindowGroup {
-            AlbumListView()
+            MainTabView()
         }
     }
 }
