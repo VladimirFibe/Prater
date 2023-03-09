@@ -61,6 +61,20 @@ final class AlbumListViewModel: ObservableObject {
             
         }.resume()
     }
+    
+    func createURL(for searchTerm: String) -> URL? {
+        let baseURL = "itunes.apple.com/search"
+        let offset = page * limit
+        let querItems = [
+        URLQueryItem(name: "term", value: searchTerm),
+        URLQueryItem(name: "entity", value: "album"),
+        URLQueryItem(name: "limit", value: String(limit)),
+        URLQueryItem(name: "offset", value: String(offset))
+        ]
+        var components = URLComponents(string: baseURL)
+        components?.queryItems = querItems
+        return components?.url
+    }
 }
 
 
