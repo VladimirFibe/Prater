@@ -11,6 +11,7 @@
 		27AB8AC729B9C9B0001FEB43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB8AC629B9C9B0001FEB43 /* ContentView.swift */; };
 		27AB8AC929B9C9B2001FEB43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27AB8AC829B9C9B2001FEB43 /* Assets.xcassets */; };
 		27AB8ACC29B9C9B2001FEB43 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27AB8ACB29B9C9B2001FEB43 /* Preview Assets.xcassets */; };
+		27AB8AD929B9CBEE001FEB43 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB8AD829B9CBEE001FEB43 /* Album.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		27AB8AC829B9C9B2001FEB43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27AB8ACB29B9C9B2001FEB43 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		27AB8AD629B9CA54001FEB43 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		27AB8AD829B9CBEE001FEB43 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		27AB8AC329B9C9B0001FEB43 /* iTunesSearch */ = {
 			isa = PBXGroup;
 			children = (
+				27AB8AD729B9CBE3001FEB43 /* Model */,
 				27AB8AD529B9CA3F001FEB43 /* App */,
 				27AB8AD329B9CA10001FEB43 /* ViewModel */,
 				27AB8AD229B9C9FB001FEB43 /* Views */,
@@ -99,6 +102,14 @@
 				27AB8AC429B9C9B0001FEB43 /* iTunesSearchApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		27AB8AD729B9CBE3001FEB43 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				27AB8AD829B9CBEE001FEB43 /* Album.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +184,7 @@
 			files = (
 				27AB8AC729B9C9B0001FEB43 /* ContentView.swift in Sources */,
 				27AB8AC529B9C9B0001FEB43 /* iTunesSearchApp.swift in Sources */,
+				27AB8AD929B9CBEE001FEB43 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
