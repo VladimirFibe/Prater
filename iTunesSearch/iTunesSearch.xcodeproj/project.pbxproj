@@ -8,18 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		27AB8AC529B9C9B0001FEB43 /* iTunesSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB8AC429B9C9B0001FEB43 /* iTunesSearchApp.swift */; };
-		27AB8AC729B9C9B0001FEB43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB8AC629B9C9B0001FEB43 /* ContentView.swift */; };
+		27AB8AC729B9C9B0001FEB43 /* AlbumListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB8AC629B9C9B0001FEB43 /* AlbumListView.swift */; };
 		27AB8AC929B9C9B2001FEB43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27AB8AC829B9C9B2001FEB43 /* Assets.xcassets */; };
 		27AB8ACC29B9C9B2001FEB43 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27AB8ACB29B9C9B2001FEB43 /* Preview Assets.xcassets */; };
+		27AB8AD929B9CBEE001FEB43 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB8AD829B9CBEE001FEB43 /* Album.swift */; };
+		27AB8ADB29B9CCCB001FEB43 /* AlbumListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB8ADA29B9CCCB001FEB43 /* AlbumListViewModel.swift */; };
+		27AB8ADD29B9D0C6001FEB43 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB8ADC29B9D0C6001FEB43 /* Song.swift */; };
+		27AB8ADF29B9D0CC001FEB43 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB8ADE29B9D0CC001FEB43 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		27AB8AC129B9C9B0001FEB43 /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27AB8AC429B9C9B0001FEB43 /* iTunesSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchApp.swift; sourceTree = "<group>"; };
-		27AB8AC629B9C9B0001FEB43 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		27AB8AC629B9C9B0001FEB43 /* AlbumListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListView.swift; sourceTree = "<group>"; };
 		27AB8AC829B9C9B2001FEB43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27AB8ACB29B9C9B2001FEB43 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		27AB8AD629B9CA54001FEB43 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		27AB8AD829B9CBEE001FEB43 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		27AB8ADA29B9CCCB001FEB43 /* AlbumListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewModel.swift; sourceTree = "<group>"; };
+		27AB8ADC29B9D0C6001FEB43 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		27AB8ADE29B9D0CC001FEB43 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		27AB8AE029B9D5AD001FEB43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +62,9 @@
 		27AB8AC329B9C9B0001FEB43 /* iTunesSearch */ = {
 			isa = PBXGroup;
 			children = (
+				27AB8AE029B9D5AD001FEB43 /* Info.plist */,
 				27AB8AD529B9CA3F001FEB43 /* App */,
+				27AB8AD729B9CBE3001FEB43 /* Model */,
 				27AB8AD329B9CA10001FEB43 /* ViewModel */,
 				27AB8AD229B9C9FB001FEB43 /* Views */,
 				27AB8AD429B9CA27001FEB43 /* Supporting Files */,
@@ -72,7 +83,7 @@
 		27AB8AD229B9C9FB001FEB43 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				27AB8AC629B9C9B0001FEB43 /* ContentView.swift */,
+				27AB8AC629B9C9B0001FEB43 /* AlbumListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -80,6 +91,7 @@
 		27AB8AD329B9CA10001FEB43 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				27AB8ADA29B9CCCB001FEB43 /* AlbumListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -99,6 +111,16 @@
 				27AB8AC429B9C9B0001FEB43 /* iTunesSearchApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		27AB8AD729B9CBE3001FEB43 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				27AB8AD829B9CBEE001FEB43 /* Album.swift */,
+				27AB8ADC29B9D0C6001FEB43 /* Song.swift */,
+				27AB8ADE29B9D0CC001FEB43 /* Movie.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,8 +193,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27AB8AC729B9C9B0001FEB43 /* ContentView.swift in Sources */,
+				27AB8ADB29B9CCCB001FEB43 /* AlbumListViewModel.swift in Sources */,
+				27AB8AC729B9C9B0001FEB43 /* AlbumListView.swift in Sources */,
+				27AB8ADF29B9D0CC001FEB43 /* Movie.swift in Sources */,
 				27AB8AC529B9C9B0001FEB43 /* iTunesSearchApp.swift in Sources */,
+				27AB8AD929B9CBEE001FEB43 /* Album.swift in Sources */,
+				27AB8ADD29B9D0C6001FEB43 /* Song.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +330,7 @@
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = iTunesSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -333,7 +359,7 @@
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = iTunesSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
