@@ -35,20 +35,25 @@ final class AlbumListViewModel: ObservableObject {
     func fetchAlbums(for searchTerm: String) {
         guard !searchTerm.isEmpty, state == .good else { return }
         state = .isLoading
-        APIService.shared.fetchAlbums(searchTerm: searchTerm, page: page, limit: limit) {[weak self] result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let results):
-                    for album in results.results {
-                        self?.albums.append(album)
-                    }
-                    self?.page += 1
-                    self?.state = (self?.albums.count == self?.limit) ? .loadedAll : .good
-                case .failure(let error):
-                    self?.state = .error("Could not load: \(error.localizedDescription)")
-                }
-            }
+        guard let url = URL(string: "https://itunes.apple.com/search?term=jack+johnson&entity=album&limit=5") else { return }
+        Task {
+            let (data, response) = try await URLSession.shared.data(from: url)
+            print(String(data: data, encoding: .utf8))
         }
+//        APIService.shared.fetchAlbums(searchTerm: searchTerm, page: page, limit: limit) {[weak self] result in
+//            DispatchQueue.main.async {
+//                switch result {
+//                case .success(let results):
+//                    for album in results.results {
+//                        self?.albums.append(album)
+//                    }
+//                    self?.page += 1
+//                    self?.state = (self?.albums.count == self?.limit) ? .loadedAll : .good
+//                case .failure(let error):
+//                    self?.state = .error("Could not load: \(error.localizedDescription)")
+//                }
+//            }
+//        }
     }
 }
 
